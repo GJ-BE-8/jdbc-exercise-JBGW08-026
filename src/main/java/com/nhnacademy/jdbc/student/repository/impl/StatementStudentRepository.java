@@ -17,7 +17,6 @@ public class StatementStudentRepository implements StudentRepository {
     @Override
     public int save(Student student){
         //todo#1 insert student
-
         return 0;
     }
 
