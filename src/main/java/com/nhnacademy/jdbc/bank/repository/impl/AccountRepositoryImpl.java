@@ -79,7 +79,7 @@ public class AccountRepositoryImpl implements AccountRepository {
     @Override
     public int deposit(Connection connection, long accountNumber, long amount){
         //todo#4 입금, executeUpdate() 결과를 반환 합니다.
-        String sql = "update jdbc_account set balance=balance+? where account_number=? ";
+        String sql = "update jdbc_account set balance=balance+? where account_number=?";
         try(PreparedStatement psmt = connection.prepareStatement(sql)) {
             psmt.setLong(1,amount);
             psmt.setLong(2,accountNumber);
